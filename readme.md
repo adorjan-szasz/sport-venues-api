@@ -8,7 +8,7 @@ Includes:
 
 ```shell
 composer install
-docker-compose up -d
+docker compose up -d
 docker-compose exec php-fpm bin/console doctrine:migrations:migrate
 docker-compose exec php-fpm bin/console doctrine:fixtures:load
 ```
