@@ -10,6 +10,14 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
+        // Known venue for test
+        $venue = new SportVenue();
+        $venue->setName('Stadium A');
+        $venue->setLat('48.8566');
+        $venue->setLng('2.3522');
+
+        $manager->persist($venue);
+
         $faker = \Faker\Factory::create();
         for ($i = 0; $i < 50; $i++) {
             $sportVenue = new SportVenue();
